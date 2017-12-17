@@ -14,6 +14,7 @@ module Store exposing (..)
 @docs extract
 @docs map
 @docs move
+@docs set
 
 
 # Using with `Html a`
@@ -70,6 +71,17 @@ Useful when you want to change the view of an already defined store.
 map : (a -> b) -> Store s a -> Store s b
 map f store =
     { store | view = f << store.view }
+
+
+{-| Replace the view.
+
+A common pattern is to just replace the old view without depending on it:
+`set x = map (\_ -> x)`
+
+-}
+set : b -> Store m a -> Store m b
+set b store =
+    { store | view = always b }
 
 
 {-| Create a new store where the view is another store.
