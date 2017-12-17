@@ -170,7 +170,7 @@ move m traced =
     import String.Extra
     import Traced exposing (Traced)
 
-    main : Program Never (Traced String (Html a)) a
+    main : Program Never (Traced Int (Html Int)) Int
     main =
         Html.beginnerProgram
             (Traced.toBeginnerProgram (Traced.map view Traced.addition))
@@ -188,6 +188,8 @@ move m traced =
                 [ Html.Events.onClick 1 ]
                 [ Html.text "+" ]
             ]
+
+View this example on Ellie: <https://ellie-app.com/Mx3LhD8Fa1/0>
 
 -}
 toBeginnerProgram :
