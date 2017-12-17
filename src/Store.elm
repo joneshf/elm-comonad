@@ -26,12 +26,34 @@ module Store exposing (..)
 import Html exposing (Html)
 
 
-{-| Convert to a "beginner program" for use in a `main` function
+{-| Convert to a "beginner program" for use in a `main` function.
 
-    main : Program Never (Store String (Html a)) a
+    import Html exposing (Html)
+    import Html.Events
+    import Store exposing (Store)
+    import String.Extra
+
+    main : Program Never (Store Int (Html Int)) Int
     main =
         Html.beginnerProgram
-            (toBeginnerProgram { here = "Hello, World!", view = Html.text })
+            (Store.toBeginnerProgram { here = 0, view = view })
+
+    view : Int -> Html Int
+    view n =
+        Html.div
+            []
+            [ Html.button
+                [ Html.Events.onClick (n - 1) ]
+                [ Html.text "-" ]
+            , Html.div
+                []
+                [ Html.text (String.Extra.fromInt n) ]
+            , Html.button
+                [ Html.Events.onClick (n + 1) ]
+                [ Html.text "+" ]
+            ]
+
+View this example on Ellie: <https://ellie-app.com/cDGbmY8Ca1/0>
 
 -}
 toBeginnerProgram :
