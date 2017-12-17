@@ -1,0 +1,25 @@
+{
+  "name": "elm-comonad",
+  "version": "1.0.0",
+  "description": "Declarative UIs are the Future — And the Future is Comonadic!",
+  "main": "index.js",
+  "scripts": {
+    "elm": "elm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joneshf/elm-comonad.git"
+  },
+  "keywords": [],
+  "author": "Hardy Jones <jones3.hardy@gmail.com>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/joneshf/elm-comonad/issues"
+  },
+  "homepage": "https://github.com/joneshf/elm-comonad#readme",
+  "dependencies": {
+    "elm": "0.18.0",
+    "elm-format": "0.7.0-exp",
+    "elm-live": "2.7.5"
+  }
+}
