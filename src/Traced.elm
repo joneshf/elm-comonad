@@ -177,7 +177,8 @@ move m traced =
 
     view : Int -> Html Int
     view n =
-        Html.div []
+        Html.div
+            []
             [ Html.button
                 [ Html.Events.onClick -1 ]
                 [ Html.text "-" ]
