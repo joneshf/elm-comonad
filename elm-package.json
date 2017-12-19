@@ -7,6 +7,7 @@
         "src"
     ],
     "exposed-modules": [
+        "Env",
         "Store",
         "Traced"
     ],
