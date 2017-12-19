@@ -120,14 +120,14 @@ move e env =
 
 -}
 toBeginnerProgram :
-    Env e (Html a)
+    Env e (e -> Html a)
     ->
-        { model : Env e (Html a)
-        , update : e -> Env e (Html a) -> Env e (Html a)
-        , view : Env e (Html a) -> Html a
+        { model : Env e (e -> Html a)
+        , update : e -> Env e (e -> Html a) -> Env e (e -> Html a)
+        , view : Env e (e -> Html a) -> Html a
         }
 toBeginnerProgram env =
     { model = env
     , update = move
-    , view = extract
+    , view = \env -> extract env env.here
     }
