@@ -118,6 +118,8 @@ move e env =
                 [ Html.text "+" ]
             ]
 
+View this example on Ellie: <https://ellie-app.com/fLBqHbdNLa1/0>
+
 -}
 toBeginnerProgram :
     Env e (e -> Html a)
