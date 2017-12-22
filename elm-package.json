@@ -8,6 +8,8 @@
     ],
     "exposed-modules": [
         "Env",
+        "Html.Alternative",
+        "Platform.Alternative",
         "Store",
         "Traced"
     ],
