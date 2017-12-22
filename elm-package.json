@@ -1,5 +1,5 @@
 {
-    "version": "2.0.1",
+    "version": "2.1.0",
     "summary": "Declarative UIs are the Future — And the Future is Comonadic!",
     "repository": "https://github.com/joneshf/elm-comonad.git",
     "license": "BSD3",
